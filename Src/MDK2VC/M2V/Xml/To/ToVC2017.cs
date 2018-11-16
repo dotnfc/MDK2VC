@@ -9,6 +9,9 @@ namespace MDK2VC.M2V.Xml
     {
         private String getMacroDefineVC(string definestr)
         {
+            definestr = definestr.Replace("<", "&lt;");
+            definestr = definestr.Replace(">", "&gt;");
+            definestr = definestr.Replace(" ", ";");
             var builder = new StringBuilder();
             builder.Append("      <PreprocessorDefinitions>");
             builder.Append(definestr).Append("%(PreprocessorDefinitions)</PreprocessorDefinitions>");

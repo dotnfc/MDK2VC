@@ -45,6 +45,8 @@
             this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSelFileName = new System.Windows.Forms.Button();
+            this.comboBoxMDKPath = new System.Windows.Forms.ComboBox();
             this.labelOpenProj = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.TargetStatus = new System.Windows.Forms.TextBox();
@@ -56,8 +58,6 @@
             this.labelOpenVC = new System.Windows.Forms.Label();
             this.tBoxSlnPath = new System.Windows.Forms.TextBox();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.comboBoxMDKPath = new System.Windows.Forms.ComboBox();
-            this.btnSelFileName = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -69,9 +69,10 @@
             // 
             // btnTrans
             // 
-            this.btnTrans.Location = new System.Drawing.Point(11, 475);
+            this.btnTrans.Location = new System.Drawing.Point(15, 594);
+            this.btnTrans.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTrans.Name = "btnTrans";
-            this.btnTrans.Size = new System.Drawing.Size(75, 23);
+            this.btnTrans.Size = new System.Drawing.Size(100, 29);
             this.btnTrans.TabIndex = 4;
             this.btnTrans.Text = "测试读取";
             this.btnTrans.UseVisualStyleBackColor = true;
@@ -79,9 +80,10 @@
             // 
             // btnTest
             // 
-            this.btnTest.Location = new System.Drawing.Point(158, 475);
+            this.btnTest.Location = new System.Drawing.Point(211, 594);
+            this.btnTest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(75, 23);
+            this.btnTest.Size = new System.Drawing.Size(100, 29);
             this.btnTest.TabIndex = 9;
             this.btnTest.Text = "转换";
             this.btnTest.UseVisualStyleBackColor = true;
@@ -90,9 +92,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(270, 480);
+            this.label5.Location = new System.Drawing.Point(360, 600);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 12);
+            this.label5.Size = new System.Drawing.Size(52, 15);
             this.label5.TabIndex = 15;
             this.label5.Text = "未转换";
             // 
@@ -107,76 +110,80 @@
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.显示ToolStripMenuItem,
             this.退出ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(109, 52);
             // 
             // 显示ToolStripMenuItem
             // 
             this.显示ToolStripMenuItem.Name = "显示ToolStripMenuItem";
-            this.显示ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.显示ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
             this.显示ToolStripMenuItem.Text = "显示";
             this.显示ToolStripMenuItem.Click += new System.EventHandler(this.显示ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel3,
             this.toolStripStatusLabel4,
             this.toolStripStatusLabel5});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 507);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 636);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(966, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1288, 25);
             this.statusStrip1.TabIndex = 17;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(176, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(219, 20);
             this.toolStripStatusLabel1.Text = "双击\"MDK项目\"打开MDK工程 ";
             // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(11, 17);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(13, 20);
             this.toolStripStatusLabel2.Text = "|";
             // 
             // toolStripStatusLabel3
             // 
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(146, 17);
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(183, 20);
             this.toolStripStatusLabel3.Text = "双击\"VC工程\"打开VC工程";
             // 
             // toolStripStatusLabel4
             // 
             this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(11, 17);
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(13, 20);
             this.toolStripStatusLabel4.Text = "|";
             // 
             // toolStripStatusLabel5
             // 
             this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
-            this.toolStripStatusLabel5.Size = new System.Drawing.Size(116, 17);
+            this.toolStripStatusLabel5.Size = new System.Drawing.Size(144, 20);
             this.toolStripStatusLabel5.Text = "最小化后到系统托盘";
             // 
             // treeView1
             // 
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView1.Location = new System.Drawing.Point(3, 19);
+            this.treeView1.Location = new System.Drawing.Point(4, 23);
+            this.treeView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(936, 153);
+            this.treeView1.Size = new System.Drawing.Size(1248, 192);
             this.treeView1.TabIndex = 18;
             // 
             // groupBox1
@@ -186,19 +193,42 @@
             this.groupBox1.Controls.Add(this.btnSelFileName);
             this.groupBox1.Controls.Add(this.comboBoxMDKPath);
             this.groupBox1.Controls.Add(this.labelOpenProj);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(16, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(942, 54);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1256, 68);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Project File Path";
             // 
+            // btnSelFileName
+            // 
+            this.btnSelFileName.Location = new System.Drawing.Point(1175, 25);
+            this.btnSelFileName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSelFileName.Name = "btnSelFileName";
+            this.btnSelFileName.Size = new System.Drawing.Size(68, 29);
+            this.btnSelFileName.TabIndex = 5;
+            this.btnSelFileName.Text = "...";
+            this.btnSelFileName.UseVisualStyleBackColor = true;
+            this.btnSelFileName.Click += new System.EventHandler(this.btnSelFileName_Click);
+            // 
+            // comboBoxMDKPath
+            // 
+            this.comboBoxMDKPath.FormattingEnabled = true;
+            this.comboBoxMDKPath.Location = new System.Drawing.Point(59, 29);
+            this.comboBoxMDKPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxMDKPath.Name = "comboBoxMDKPath";
+            this.comboBoxMDKPath.Size = new System.Drawing.Size(1105, 23);
+            this.comboBoxMDKPath.TabIndex = 4;
+            // 
             // labelOpenProj
             // 
             this.labelOpenProj.AutoSize = true;
-            this.labelOpenProj.Location = new System.Drawing.Point(9, 23);
+            this.labelOpenProj.Location = new System.Drawing.Point(12, 33);
+            this.labelOpenProj.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelOpenProj.Name = "labelOpenProj";
-            this.labelOpenProj.Size = new System.Drawing.Size(29, 12);
+            this.labelOpenProj.Size = new System.Drawing.Size(39, 15);
             this.labelOpenProj.TabIndex = 3;
             this.labelOpenProj.Text = "Open";
             this.labelOpenProj.Click += new System.EventHandler(this.labelOpenProj_Click);
@@ -209,11 +239,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.TargetStatus);
             this.groupBox4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(6, 194);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox4.Location = new System.Drawing.Point(8, 242);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox4.Size = new System.Drawing.Size(942, 90);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox4.Size = new System.Drawing.Size(1256, 112);
             this.groupBox4.TabIndex = 21;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Target Info";
@@ -225,13 +255,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TargetStatus.BackColor = System.Drawing.SystemColors.Window;
             this.TargetStatus.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TargetStatus.Location = new System.Drawing.Point(5, 19);
-            this.TargetStatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TargetStatus.Location = new System.Drawing.Point(7, 24);
+            this.TargetStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TargetStatus.Multiline = true;
             this.TargetStatus.Name = "TargetStatus";
             this.TargetStatus.ReadOnly = true;
             this.TargetStatus.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.TargetStatus.Size = new System.Drawing.Size(930, 66);
+            this.TargetStatus.Size = new System.Drawing.Size(1239, 82);
             this.TargetStatus.TabIndex = 0;
             // 
             // groupBox5
@@ -241,11 +271,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.treeView1);
             this.groupBox5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(5, 292);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox5.Location = new System.Drawing.Point(7, 365);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox5.Size = new System.Drawing.Size(942, 176);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox5.Size = new System.Drawing.Size(1256, 220);
             this.groupBox5.TabIndex = 22;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Source Groups";
@@ -257,11 +287,11 @@
             this.groupBox3.Controls.Add(this.comboBoxTarget);
             this.groupBox3.Controls.Add(this.elementHost);
             this.groupBox3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(11, 138);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Location = new System.Drawing.Point(15, 172);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(942, 56);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Size = new System.Drawing.Size(1256, 70);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Target Groups";
@@ -272,9 +302,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxTarget.FormattingEnabled = true;
-            this.comboBoxTarget.Location = new System.Drawing.Point(12, 22);
+            this.comboBoxTarget.Location = new System.Drawing.Point(16, 28);
+            this.comboBoxTarget.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxTarget.Name = "comboBoxTarget";
-            this.comboBoxTarget.Size = new System.Drawing.Size(917, 22);
+            this.comboBoxTarget.Size = new System.Drawing.Size(1221, 26);
             this.comboBoxTarget.TabIndex = 14;
             // 
             // elementHost
@@ -282,9 +313,10 @@
             this.elementHost.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.elementHost.Location = new System.Drawing.Point(6, 16);
+            this.elementHost.Location = new System.Drawing.Point(8, 20);
+            this.elementHost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.elementHost.Name = "elementHost";
-            this.elementHost.Size = new System.Drawing.Size(930, 33);
+            this.elementHost.Size = new System.Drawing.Size(1240, 41);
             this.elementHost.TabIndex = 11;
             this.elementHost.Text = "elementHost1";
             this.elementHost.Child = null;
@@ -297,11 +329,11 @@
             this.groupBox2.Controls.Add(this.tBoxSlnPath);
             this.groupBox2.Controls.Add(this.elementHost1);
             this.groupBox2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(10, 73);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Location = new System.Drawing.Point(13, 91);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(942, 57);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(1256, 71);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Target";
@@ -309,9 +341,10 @@
             // labelOpenVC
             // 
             this.labelOpenVC.AutoSize = true;
-            this.labelOpenVC.Location = new System.Drawing.Point(10, 25);
+            this.labelOpenVC.Location = new System.Drawing.Point(13, 31);
+            this.labelOpenVC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelOpenVC.Name = "labelOpenVC";
-            this.labelOpenVC.Size = new System.Drawing.Size(35, 14);
+            this.labelOpenVC.Size = new System.Drawing.Size(40, 18);
             this.labelOpenVC.TabIndex = 13;
             this.labelOpenVC.Text = "Open";
             this.labelOpenVC.Click += new System.EventHandler(this.labelOpenVC_Click);
@@ -321,10 +354,11 @@
             this.tBoxSlnPath.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tBoxSlnPath.Location = new System.Drawing.Point(45, 22);
+            this.tBoxSlnPath.Location = new System.Drawing.Point(60, 28);
+            this.tBoxSlnPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tBoxSlnPath.Name = "tBoxSlnPath";
             this.tBoxSlnPath.ReadOnly = true;
-            this.tBoxSlnPath.Size = new System.Drawing.Size(885, 22);
+            this.tBoxSlnPath.Size = new System.Drawing.Size(1179, 25);
             this.tBoxSlnPath.TabIndex = 12;
             // 
             // elementHost1
@@ -332,36 +366,19 @@
             this.elementHost1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.elementHost1.Location = new System.Drawing.Point(6, 16);
+            this.elementHost1.Location = new System.Drawing.Point(8, 20);
+            this.elementHost1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(930, 34);
+            this.elementHost1.Size = new System.Drawing.Size(1240, 42);
             this.elementHost1.TabIndex = 11;
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = null;
             // 
-            // comboBoxMDKPath
-            // 
-            this.comboBoxMDKPath.FormattingEnabled = true;
-            this.comboBoxMDKPath.Location = new System.Drawing.Point(44, 20);
-            this.comboBoxMDKPath.Name = "comboBoxMDKPath";
-            this.comboBoxMDKPath.Size = new System.Drawing.Size(830, 20);
-            this.comboBoxMDKPath.TabIndex = 4;
-            // 
-            // btnSelFileName
-            // 
-            this.btnSelFileName.Location = new System.Drawing.Point(881, 23);
-            this.btnSelFileName.Name = "btnSelFileName";
-            this.btnSelFileName.Size = new System.Drawing.Size(51, 23);
-            this.btnSelFileName.TabIndex = 5;
-            this.btnSelFileName.Text = "...";
-            this.btnSelFileName.UseVisualStyleBackColor = true;
-            this.btnSelFileName.Click += new System.EventHandler(this.btnSelFileName_Click);
-            // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 529);
+            this.ClientSize = new System.Drawing.Size(1288, 661);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox5);
@@ -372,10 +389,10 @@
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnTrans);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MDK5 2 VC2017";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.SizeChanged += new System.EventHandler(this.FormMain_SizeChanged);
             this.contextMenuStrip1.ResumeLayout(false);
